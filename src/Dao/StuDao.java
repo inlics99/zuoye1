@@ -17,7 +17,6 @@ public class StuDao extends BaseDao {
 	public List<stuen> getall(){
 		List<stuen> list = new ArrayList<stuen>();
 		conn = getConnection();
-		// 创建要执行的SQL命令
 		try {
 			String sql = "SELECT * FROM stu";
 			pst = conn.prepareStatement(sql);
@@ -32,6 +31,18 @@ public class StuDao extends BaseDao {
 			closeAll(rs, pst, conn);
 		}
 		return list;
-		
+	}
+	public void Addinfo(int id,String name,int age) {
+		try {
+			conn=getConnection();
+			String sql="INSERT INTO stu VALUE("+id+",'"+name+"',"+age+")";
+			pst=conn.prepareStatement(sql);
+//			pst.setInt(1, id);
+//			pst.setString(2, name);
+//			pst.setInt(3, age);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

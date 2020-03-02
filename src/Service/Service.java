@@ -13,4 +13,8 @@ public class Service {
 		lists.put("info1", sd.getall());
 		return lists;
 	}
+	public void add(int id,String name,int age) {
+		
+		sd.Addinfo(id, name, age);
+	}
 }

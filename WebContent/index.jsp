@@ -22,7 +22,23 @@
 				<td>${obj.sage}</td>
 			</tr>
 		</c:forEach>
-		增加信息:
-	</table>
+		
+		<form action="add" method="post" >
+			<table >
+				<tr><td colspan="3">增加信息</td></tr>
+				<tr>
+					<td>编号</td>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr>
+				<tr>
+				  <td><input type="text" name="id" value="" /></td>
+				  <td><input type="text" name="name" value="" /></td>
+				  <td><input type="text" name="age" value="" /></td>
+				</tr>
+				<tr><td colspan="3"> <input type="submit" value="提交"/> </td></tr>
+			</table>
+		</form>
+		
 </body>
 </html>
